@@ -1,0 +1,142 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angles School - Complete Test Page</title>
+    {% tailwind_css %}
+</head>
+<body class="bg-black text-white min-h-screen p-8">
+    <div class="max-w-4xl mx-auto space-y-8">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4 text-blue-400">Angles School</h1>
+            <p class="text-xl text-gray-300">Excellence in Education Since 2003</p>
+        </header>
+
+        <!-- Welcome Section -->
+        <section>
+            <h2 class="text-3xl font-semibold mb-6 text-green-400">Welcome to Our Institution</h2>
+            <p class="text-lg mb-4 leading-relaxed">
+                Welcome to Angles School, where we shape the future of learning! Our commitment to educational excellence has been unwavering for over two decades. We believe that every student has unique potential that deserves to be nurtured and developed through innovative teaching methods and comprehensive academic programs.
+            </p>
+            <p class="text-lg mb-4 leading-relaxed">
+                At Angles School, we foster an environment where creativity meets academic rigor. Our dedicated faculty members work tirelessly to ensure that each student receives personalized attention and support throughout their educational journey. We understand that learning is not just about acquiring knowledge, but about developing critical thinking skills, emotional intelligence, and the confidence to tackle real-world challenges.
+            </p>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="bg-gray-900 p-6 rounded-lg">
+            <h2 class="text-3xl font-semibold mb-6 text-purple-400">Our Mission & Vision</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Mission Statement</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        To provide exceptional educational experiences that empower students to become confident, capable, and compassionate global citizens. We are committed to fostering intellectual curiosity, creativity, and character development in a supportive and inclusive learning environment.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Vision Statement</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        To be a leading educational institution recognized for innovation, excellence, and the transformative impact we have on our students' lives. We envision a future where our graduates make meaningful contributions to society and lead positive change in their communities.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section>
+            <h2 class="text-3xl font-semibold mb-6 text-red-400">Academic Programs</h2>
+            <div class="space-y-4">
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Elementary Education (Grades K-5)</h3>
+                    <p class="text-gray-300">
+                        Our elementary program builds strong foundational skills in literacy, mathematics, science, and social studies. We emphasize hands-on learning experiences that make education engaging and meaningful for young learners. Students develop essential study habits, social skills, and a love for lifelong learning.
+                    </p>
+                </div>
+                
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Middle School (Grades 6-8)</h3>
+                    <p class="text-gray-300">
+                        The middle school years are crucial for academic and personal development. Our program challenges students with rigorous coursework while providing the support they need to navigate this important transition. We offer exploratory courses in arts, technology, and foreign languages to help students discover their interests and talents.
+                    </p>
+                </div>
+                
+                <div class="border-l-4 border-purple-500 pl-4">
+                    <h3 class="text-xl font-bold mb-2">High School (Grades 9-12)</h3>
+                    <p class="text-gray-300">
+                        Our comprehensive high school program prepares students for college and career success. We offer Advanced Placement courses, dual enrollment opportunities, and specialized tracks in STEM, humanities, and the arts. Students work closely with counselors to develop personalized graduation plans that align with their post-secondary goals.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Section -->
+        <section class="bg-gray-800 p-6 rounded-lg">
+            <h2 class="text-3xl font-semibold mb-6 text-cyan-400">Our Distinguished Faculty</h2>
+            <p class="text-lg mb-4 leading-relaxed">
+                The heart of any great school is its faculty, and at Angles School, we are proud to have assembled a team of exceptional educators who are passionate about teaching and committed to student success. Our teachers hold advanced degrees in their subject areas and participate in ongoing professional development to stay current with best practices in education.
+            </p>
+            <p class="text-lg mb-4 leading-relaxed">
+                Beyond their academic credentials, our faculty members are mentors, coaches, and role models who invest in the whole child. They create engaging learning environments that challenge students intellectually while supporting them emotionally and socially. Many of our teachers have received regional and national recognition for their innovative teaching methods and dedication to student achievement.
+            </p>
+            <p class="text-lg leading-relaxed">
+                With an average of 15 years of teaching experience and a student-to-teacher ratio of 15:1, our faculty can provide the individualized attention that helps every student thrive. We believe that strong relationships between teachers and students are fundamental to effective learning and personal growth.
+            </p>
+        </section>
+
+        <!-- Facilities Section -->
+        <section>
+            <h2 class="text-3xl font-semibold mb-6 text-orange-400">State-of-the-Art Facilities</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Learning Spaces</h3>
+                    <ul class="text-gray-300 space-y-2">
+                        <li>• Modern classrooms with interactive whiteboards and multimedia capabilities</li>
+                        <li>• Science laboratories equipped with cutting-edge technology and safety features</li>
+                        <li>• Computer labs with high-speed internet and latest software applications</li>
+                        <li>• Library and media center with extensive digital and print resources</li>
+                        <li>• Art studios with professional-grade equipment and materials</li>
+                        <li>• Music rooms with instruments and recording capabilities</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Recreation & Athletics</h3>
+                    <ul class="text-gray-300 space-y-2">
+                        <li>• Full-size gymnasium with regulation basketball and volleyball courts</li>
+                        <li>• Outdoor athletic fields for soccer, baseball, and track events</li>
+                        <li>• Fitness center with modern exercise equipment</li>
+                        <li>• Swimming pool for aquatic programs and competitions</li>
+                        <li>• Playground areas designed for different age groups</li>
+                        <li>• Cafeteria serving nutritious meals prepared fresh daily</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Section -->
+        <section class="bg-red-900 p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 text-white">Text Display Test</h2>
+            <p class="text-sm text-gray-300 mb-2">Small text: This is small text to test readability and wrapping.</p>
+            <p class="text-base text-gray-300 mb-2">Base text: This is base size text for general content reading and testing purposes.</p>
+            <p class="text-lg text-gray-300 mb-2">Large text: This is larger text that should be easily readable and properly wrapped within the container.</p>
+            <p class="text-xl text-gray-300 mb-2">Extra large text: This is extra large text to test how larger fonts handle line breaks and container boundaries.</p>
+            <p class="text-2xl text-gray-300">XXL text: This is very large text to ensure all sizes display correctly without cutoff issues or overflow problems in the layout.</p>
+        </section>
+
+        <!-- Contact Information -->
+        <footer class="text-center pt-8 border-t border-gray-700">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-400">Contact Information</h2>
+            <div class="space-y-2 text-red-900">
+                <p>📍 123 Education Street, Learning City, LC 12345</p>
+                <p>📞 Phone: (555) 123-4567 | Fax: (555) 123-4568</p>
+                <p>✉️ Email: info@anglesschool.edu | Website: www.anglesschool.edu</p>
+                <p class="text-sm text-yellow-300 mt-4">© 2025 Angles School. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
