@@ -10,104 +10,84 @@
 <body>
 
 <div class="container">
-
   <!-- Header -->
   <header class="center section">
-    <h1>Angles School</h1>
-    <p>Excellence in Education Since 2005</p>
+    {% if header_page.hero_image %}
+        <img src="{{ header_page.hero_image.url }}" alt="{{ header_page.title }}" class="hero-image">
+    {% endif %}
+    <h1>{{ header_page.heading|default:"Angles School" }}</h1>
+    <p>{{ header_page.description|default:"Excellence in Education Since 2005" }}</p>
   </header>
 
   <!-- Welcome -->
   <section class="section">
-    <h2 style="color: #34d399;">Welcome to Our Institution</h2>
-    <p>Welcome to Angles School, where we shape the future of learning!...</p>
-    <p>At Angles School, we foster an environment where creativity meets academic rigor...</p>
+    {% if welcome_page.hero_image %}
+        <img src="{{ welcome_page.hero_image.url }}" alt="{{ welcome_page.title }}" class="section-image">
+    {% endif %}
+    <h2>{{ welcome_page.heading|default:"Welcome" }}</h2>
+    <p>{{ welcome_page.description|default:"Welcome to our school community." }}</p>
   </section>
 
   <!-- Mission -->
   <section class="bg-dark section">
-    <h2 style="color: #a78bfa;">Our Mission & Vision</h2>
-    <div class="grid md-2col">
-      <div>
-        <h3 style="color: #facc15;">Mission Statement</h3>
-        <p>To provide exceptional educational experiences...</p>
-      </div>
-      <div>
-        <h3 style="color: #facc15;">Vision Statement</h3>
-        <p>To be a leading educational institution recognized for innovation...</p>
-      </div>
-    </div>
+    {% if mission_page.hero_image %}
+        <img src="{{ mission_page.hero_image.url }}" alt="{{ mission_page.title }}" class="section-image">
+    {% endif %}
+    <h2>{{ mission_page.heading|default:"Our Mission" }}</h2>
+    <p>{{ mission_page.description|default:"Empowering students to achieve excellence." }}</p>
   </section>
 
   <!-- Programs -->
   <section class="section">
-    <h2 style="color: #f87171;">Academic Programs</h2>
-
-    <div>
-      <h3 style="color: #60a5fa;">Elementary Education (Grades K-5)</h3>
-      <p>Our elementary program builds strong foundational skills...</p>
-    </div>
-
-    <div>
-      <h3 style="color: #34d399;">Middle School (Grades 6-8)</h3>
-      <p>The middle school years are crucial for academic and personal development...</p>
-    </div>
-
-    <div>
-      <h3 style="color: #a78bfa;">High School (Grades 9-12)</h3>
-      <p>Our comprehensive high school program prepares students for college and career success...</p>
-    </div>
+    {% if programs_page.hero_image %}
+        <img src="{{ programs_page.hero_image.url }}" alt="{{ programs_page.title }}" class="section-image">
+    {% endif %}
+    <h2>{{ programs_page.heading|default:"Academic Programs" }}</h2>
+    <p>{{ programs_page.description|default:"Comprehensive programs for all grade levels." }}</p>
   </section>
 
   <!-- Faculty -->
   <section class="bg-dark section">
-    <h2 style="color: #22d3ee;">Our Distinguished Faculty</h2>
-    <p>The heart of any great school is its faculty...</p>
-    <p>Beyond their academic credentials, our faculty members are mentors...</p>
-    <p>With an average of 15 years of teaching experience...</p>
+    {% if faculty_page.hero_image %}
+        <img src="{{ faculty_page.hero_image.url }}" alt="{{ faculty_page.title }}" class="section-image">
+    {% endif %}
+    <h2>{{ faculty_page.heading|default:"Our Faculty" }}</h2>
+    <p>{{ faculty_page.description|default:"Experienced and dedicated teachers." }}</p>
   </section>
 
   <!-- Facilities -->
   <section class="section">
-    <h2 style="color: #fb923c;">State-of-the-Art Facilities</h2>
-    <div class="grid md-2col">
-      <div>
-        <h3>Learning Spaces</h3>
-        <ul class="list">
-          <li>Modern classrooms with interactive whiteboards...</li>
-          <li>Science laboratories equipped with cutting-edge technology...</li>
-          <li>Computer labs with high-speed internet...</li>
-          <li>Library and media center with extensive digital and print resources</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Recreation & Athletics</h3>
-        <ul class="list">
-          <li>Full-size gymnasium...</li>
-          <li>Outdoor athletic fields...</li>
-          <li>Fitness center with modern equipment</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    {% if facilities_page.hero_image %}
+        <img src="{{ facilities_page.hero_image.url }}" alt="{{ facilities_page.title }}" class="section-image">
+    {% endif %}
+    <h2>{{ facilities_page.heading|default:"School Facilities" }}</h2>
+    <p>{{ facilities_page.description|default:"Modern facilities for optimal learning." }}</p>
 
-  <!-- Text Test -->
-  <section class="bg-dark section">
-    <h2>Text Display Test</h2>
-    <p style="font-size: 0.8rem;">Small text: This is small text to test readability.</p>
-    <p>Base text: This is base size text...</p>
-    <p style="font-size: 1.2rem;">Large text: This is larger text...</p>
-    <p style="font-size: 1.5rem;">Extra large text...</p>
-    <p style="font-size: 2rem;">XXL text...</p>
+    <!-- Gallery Section -->
+    {% if gallery_images %}
+        <div class="gallery">
+            <h3>Photo Gallery</h3>
+            <div class="gallery-grid">
+                {% for image in gallery_images %}
+                    <div class="gallery-item">
+                        <img src="{{ image.image.url }}" alt="{{ image.title }}" class="gallery-image">
+                        {% if image.caption %}
+                            <p class="gallery-caption">{{ image.caption }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
   </section>
 
   <!-- Footer -->
   <footer>
-    <h2 style="color: #818cf8;">Contact Information</h2>
-    <p>📍 123 Education Street, Learning City</p>
-    <p>📞 Phone: (555) 123-4567</p>
-    <p>✉️ Email: info@anglesschool.edu</p>
-    <p class="copyright">© 2025 Angles School. All rights reserved.</p>
+    {% if contact_page.hero_image %}
+        <img src="{{ contact_page.hero_image.url }}" alt="{{ contact_page.title }}" class="footer-image">
+    {% endif %}
+    <h2 style="color: #818cf8;">{{ contact_page.heading|default:"Contact Information" }}</h2>
+    <p>{{ contact_page.description|default:"Get in touch with us for more information." }}</p>
   </footer>
 
 </div>
